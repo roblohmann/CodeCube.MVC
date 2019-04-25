@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CodeCube.Mvc</id>
+    <version>2.0.0.0-alpha</version>
+    <title>CodeCube.Mvc Library</title>
+    <authors>Rob Lohmann</authors>
+    <owners>Rob Lohmann</owners>
+    <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+    <projectUrl>https://github.com/Rohem/CodeCube</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.
+    </description>
+    <copyright>2013 - 2016 Rob Lohmann</copyright>
+    <tags>mvc mvc4 mvc5 utilities predicates predicatebuilder htmlhelpers navigation menu analytics</tags>
+    <dependencies>
+      <dependency id="CodeCube.Core" version="2.0.1-alpha" />
+
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.6" />
+      <dependency id="System.ServiceModel.Syndication" version="4.5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\CodeCube.Mvc.dll" target="lib\net45\CodeCube.Mvc.dll"/>
+    <file src="bin\Release\CodeCube.Mvc.xml" target="lib\net45\CodeCube.Mvc.xml"/>
+    <file src="bin\Release\nl-NL\CodeCube.Core.resources.dll" target="lib\net45\CodeCube.Core.resources.dll"/>
+  </files>
+</package>
