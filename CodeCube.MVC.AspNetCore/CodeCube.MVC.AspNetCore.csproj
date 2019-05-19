@@ -6,6 +6,8 @@
     <Company>Rob Lohmann</Company>
     <Copyright>2019 Rob Lohmann</Copyright>
     <PackageProjectUrl>https://github.com/roblohmann/codecube.mvc</PackageProjectUrl>
+    <PackageId>CodeCube.Mvc.AspNetCore</PackageId>
+    <Product>CodeCube.Mvc.AspNetCore</Product>
   </PropertyGroup>
 
   <ItemGroup>
