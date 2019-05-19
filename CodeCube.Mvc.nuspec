@@ -12,10 +12,10 @@
     <description>
       A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.
     </description>
-    <copyright>2013 - 2016 Rob Lohmann</copyright>
+    <copyright>2013 - 2019 Rob Lohmann</copyright>
     <tags>mvc mvc4 mvc5 utilities predicates predicatebuilder htmlhelpers navigation menu analytics</tags>
     <dependencies>
-      <dependency id="CodeCube.Core" version="2.0.1-alpha" />
+      <dependency id="CodeCube.Core" version="2.0.0" />
 
       <dependency id="Microsoft.AspNet.Mvc" version="5.2.6" />
       <dependency id="System.ServiceModel.Syndication" version="4.5.0" />
