@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Reflection;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CodeCube.MVC.AspNetCore.HtmlHelpers
 {
@@ -11,7 +11,7 @@ namespace CodeCube.MVC.AspNetCore.HtmlHelpers
         /// </summary>
         /// <param name="helper">The MVC htmlhelper instance.</param>
         /// <returns>The name of the machine.</returns>
-        public static string CurrentMachine(this HtmlHelper helper)
+        public static string CurrentMachine(this IHtmlHelper helper)
         {
             return $"{Environment.MachineName}";
         }
@@ -20,7 +20,7 @@ namespace CodeCube.MVC.AspNetCore.HtmlHelpers
         /// Get the version from the current assembly as string.
         /// </summary>
         /// <returns>The assembly version as string.</returns>
-        public static string CurrentVersion(this HtmlHelper helper)
+        public static string CurrentVersion(this IHtmlHelper helper)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace CodeCube.MVC.AspNetCore.HtmlHelpers
         /// </summary>
         /// <param name="assemblyName">The assembly to get the version for.</param>
         /// <returns>The assembly version as string.</returns>
-        public static string CurrentVersion(this HtmlHelper helper, String assemblyName)
+        public static string CurrentVersion(this IHtmlHelper helper, string assemblyName)
         {
             try
             {
