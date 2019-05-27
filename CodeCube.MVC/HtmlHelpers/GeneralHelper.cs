@@ -25,7 +25,7 @@ namespace CodeCube.MVC.HtmlHelpers
             try
             {
                 var version = Assembly.GetExecutingAssembly().GetName().Version;
-                return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build.ToString("00"), version.Revision.ToString("00"));
+                return $"{version.Major}.{version.Minor}.{version.Build:0}.{version.Revision:0}";
             }
             catch (Exception)
             {
@@ -43,7 +43,7 @@ namespace CodeCube.MVC.HtmlHelpers
             try
             {
                 var version = Assembly.Load(assemblyName).GetName().Version;
-                return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build.ToString("00"), version.Revision.ToString("00"));
+                return $"{version.Major}.{version.Minor}.{version.Build:0}.{version.Revision:0}";
             }
             catch (Exception)
             {

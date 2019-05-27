@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>CodeCube.Mvc</id>
-    <version>2.0.0.0-alpha</version>
+    <version>2.0.1-alpha</version>
     <title>CodeCube.Mvc Library</title>
     <authors>Rob Lohmann</authors>
     <owners>Rob Lohmann</owners>
