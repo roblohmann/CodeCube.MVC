@@ -7,8 +7,8 @@
     <ProjectGuid>{2FB39BDC-1BD4-4F10-85C3-2C929C2357C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeCube.MVC</RootNamespace>
-    <AssemblyName>CodeCube.MVC</AssemblyName>
+    <RootNamespace>CodeCube.Mvc</RootNamespace>
+    <AssemblyName>CodeCube.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CodeCube.Mvc.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CodeCube.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">

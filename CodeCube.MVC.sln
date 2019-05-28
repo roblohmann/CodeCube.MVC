@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCube.MVC", "CodeCube.MVC\CodeCube.MVC.csproj", "{2FB39BDC-1BD4-4F10-85C3-2C929C2357C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCube.Mvc", "CodeCube.MVC\CodeCube.Mvc.csproj", "{2FB39BDC-1BD4-4F10-85C3-2C929C2357C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeCube.MVC.AspNetCore", "CodeCube.MVC.AspNetCore\CodeCube.MVC.AspNetCore.csproj", "{0DE70937-0505-4FA7-ACC4-E0AE299CF376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeCube.Mvc.AspNetCore", "CodeCube.MVC.AspNetCore\CodeCube.Mvc.AspNetCore.csproj", "{0DE70937-0505-4FA7-ACC4-E0AE299CF376}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{64889B43-DB90-43E6-8C1D-0966DC858B29}"
 	ProjectSection(SolutionItems) = preProject
