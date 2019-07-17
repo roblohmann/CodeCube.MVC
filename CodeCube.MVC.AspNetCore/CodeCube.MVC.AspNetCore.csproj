@@ -8,6 +8,7 @@
     <PackageProjectUrl>https://github.com/roblohmann/codecube.mvc</PackageProjectUrl>
     <PackageId>CodeCube.Mvc.AspNetCore</PackageId>
     <Product>CodeCube.Mvc.AspNetCore</Product>
+    <Description>A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.</Description>
   </PropertyGroup>
 
   <ItemGroup>
