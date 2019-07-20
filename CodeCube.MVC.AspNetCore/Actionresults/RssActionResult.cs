@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ServiceModel.Syndication;
 using System.Text;
 using System.Xml;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
-namespace CodeCube.MVC.AspNetCore.Actionresults
+namespace CodeCube.Mvc.AspNetCore.Actionresults
 {
     public class RssActionResult : FileResult
     {

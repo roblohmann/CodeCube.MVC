@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CodeCube.MVC.Attributes
+namespace CodeCube.Mvc.Attributes
 {
     /// <summary>
     /// Attribute to validate uploaded files.

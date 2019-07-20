@@ -29,7 +29,7 @@ namespace CodeCube.Mvc.Filters
             //Don't execute the filter if we're debugging.
             if (filterContext.HttpContext.IsDebuggingEnabled && _dontFilterIfDebug) return;
 
-            response.Filter = new WhitespaceFilter();
+            response.Filter = new WhitespaceFilter(response.OutputStream);
             //response.Filter = new OutputFilter(response.Filter, stringvalue =>
             //{
             //    stringvalue = Regex.Replace(stringvalue, @"\s+", " ");

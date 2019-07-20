@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 
-namespace CodeCube.MVC.Actionresults
+namespace CodeCube.Mvc.Actionresults
 {
     public class RssActionResult : FileResult
     {

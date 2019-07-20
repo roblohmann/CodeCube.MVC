@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CodeCube.MVC.AspNetCore.Actionresults
+namespace CodeCube.Mvc.AspNetCore.Actionresults
 {
     public class XmlResult : ActionResult
     {

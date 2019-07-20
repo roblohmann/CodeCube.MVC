@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using CodeCube.Core.Enumerations;
-using CodeCube.MVC.Tagbuilders;
+using CodeCube.Mvc.Tagbuilders;
 
-namespace CodeCube.MVC.Attributes
+namespace CodeCube.Mvc.Attributes
 {
     public class CanonicalUrlAttribute : ActionFilterAttribute
     {

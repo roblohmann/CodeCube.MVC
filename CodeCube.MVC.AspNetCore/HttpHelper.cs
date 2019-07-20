@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
 
-namespace CodeCube.MVC.AspNetCore
+namespace CodeCube.Mvc.AspNetCore
 {
     public sealed class HttpHelper
     {

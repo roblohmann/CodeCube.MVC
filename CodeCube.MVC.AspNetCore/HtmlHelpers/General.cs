@@ -3,7 +3,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CodeCube.MVC.AspNetCore.HtmlHelpers
+namespace CodeCube.Mvc.AspNetCore.HtmlHelpers
 {
     public static class General
     {

@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Web.Mvc;
 
-namespace CodeCube.MVC.HtmlHelpers
+namespace CodeCube.Mvc.HtmlHelpers
 {
     public static class GeneralHelper
     {

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace CodeCube.MVC.Tagbuilders
+namespace CodeCube.Mvc.Tagbuilders
 {
     public class MetaTagBuilder
     {

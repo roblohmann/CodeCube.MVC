@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace CodeCube.Mvc.AspNetCore.Attributes
+namespace CodeCube.Mvc.AspNetCore.Filters
 {
     /// <summary>
     /// Use this attribute on a controller to add values to the responseheader.

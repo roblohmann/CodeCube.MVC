@@ -1,9 +1,9 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using CodeCube.Core.Enumerations;
-using CodeCube.MVC.Tagbuilders;
+using CodeCube.Mvc.Tagbuilders;
 
-namespace CodeCube.MVC.HtmlHelpers
+namespace CodeCube.Mvc.HtmlHelpers
 {
     public static class MetaHelper
     {
