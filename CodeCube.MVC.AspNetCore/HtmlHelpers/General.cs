@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CodeCube.MVC.AspNetCore.HtmlHelpers
@@ -49,6 +50,18 @@ namespace CodeCube.MVC.AspNetCore.HtmlHelpers
             {
                 return "?.?.?.?";
             }
+        }
+
+        /// <summary>
+        /// Validates a string against a provided value
+        /// </summary>
+        /// <param name="value">The value to validate</param>
+        /// <param name="evaluation">The evaluation to make</param>
+        /// <example>@Html.ActionLink("Create New", "Create").If(User.IsInRole("SomeRole"))</example>
+        /// <returns>The string if it matches, otherwise an empty string.</returns>
+        public static HtmlString If(this HtmlString value, bool evaluation)
+        {
+            return evaluation ? value : HtmlString.Empty;
         }
     }
 }

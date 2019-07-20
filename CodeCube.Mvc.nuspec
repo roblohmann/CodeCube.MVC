@@ -15,7 +15,7 @@
     <copyright>2013 - 2019 Rob Lohmann</copyright>
     <tags>mvc mvc4 mvc5 utilities predicates predicatebuilder htmlhelpers navigation menu analytics</tags>
     <dependencies>
-      <dependency id="CodeCube.Core" version="2.0.0" />
+      <dependency id="CodeCube.Core" version="2.0.192011" />
 
       <dependency id="Microsoft.AspNet.Mvc" version="5.2.6" />
       <dependency id="System.ServiceModel.Syndication" version="4.5.0" />

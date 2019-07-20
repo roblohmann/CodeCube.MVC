@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CodeCube.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeCube.Core.2.0.1-alpha\lib\net471\CodeCube.Core.dll</HintPath>
+      <HintPath>..\packages\CodeCube.Core.2.0.192011\lib\net471\CodeCube.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -85,8 +85,14 @@
     <Compile Include="Actionresults\RssActionResult.cs" />
     <Compile Include="Attributes\CanonicalUrlAttribute.cs" />
     <Compile Include="Attributes\HttpPostedFileExtensionsAttribute.cs" />
-    <Compile Include="HtmlHelpers\GeneralHelper.cs" />
-    <Compile Include="HtmlHelpers\MetaHelper.cs" />
+    <Compile Include="Filters\CompressFilterAttribute.cs" />
+    <Compile Include="Filters\OutputFilterAttribute.cs" />
+    <Compile Include="Filters\WhitespaceFilterAttribute.cs" />
+    <Compile Include="HtmlHelpers\General.cs" />
+    <Compile Include="HtmlHelpers\Html5Helper.cs" />
+    <Compile Include="HtmlHelpers\LabelExtensions.cs" />
+    <Compile Include="HtmlHelpers\Meta.cs" />
+    <Compile Include="HtmlHelpers\NavigationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tagbuilders\MetaTagBuilder.cs" />
   </ItemGroup>

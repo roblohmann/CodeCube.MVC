@@ -34,5 +34,26 @@ namespace CodeCube.MVC.HtmlHelpers
             var canonical = MetaTagBuilder.GetCanonicalUrl(HttpContext.Current.Request.RequestContext.RouteData, host, protocol.ToString(), language);
             return new MvcHtmlString(canonical.ToString(TagRenderMode.SelfClosing));
         }
+
+        /// <summary>
+        /// Get the ip address from the machine visiting your website.
+        /// </summary>
+        public static MvcHtmlString GetIpAddress(this HtmlHelper htmlHelper)
+        {
+            return new MvcHtmlString(GetIpAddress());
+        }
+
+        #region privates
+        private static string GetIpAddress()
+        {
+            var context = System.Web.HttpContext.Current;
+            var ipAddress = context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+
+            if (string.IsNullOrEmpty(ipAddress)) return context.Request.ServerVariables["REMOTE_ADDR"];
+            var addresses = ipAddress.Split(',');
+
+            return addresses.Length != 0 ? addresses[0] : context.Request.ServerVariables["REMOTE_ADDR"];
+        }
+        #endregion
     }
 }

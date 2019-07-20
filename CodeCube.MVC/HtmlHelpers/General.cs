@@ -38,7 +38,7 @@ namespace CodeCube.MVC.HtmlHelpers
         /// </summary>
         /// <param name="assemblyName">The assembly to get the version for.</param>
         /// <returns>The assembly version as string.</returns>
-        public static string CurrentVersion(this HtmlHelper helper, String assemblyName)
+        public static string CurrentVersion(this HtmlHelper helper, string assemblyName)
         {
             try
             {
@@ -49,6 +49,18 @@ namespace CodeCube.MVC.HtmlHelpers
             {
                 return "?.?.?.?";
             }
+        }
+
+        /// <summary>
+        /// Validates a string against a provided value
+        /// </summary>
+        /// <param name="value">The value to validate</param>
+        /// <param name="evaluation">The evaluation to make</param>
+        /// <example>@Html.ActionLink("Create New", "Create").If(User.IsInRole("SomeRole"))</example>
+        /// <returns>The string if it matches, otherwise an empty string.</returns>
+        public static MvcHtmlString If(this MvcHtmlString value, bool evaluation)
+        {
+            return evaluation ? value : MvcHtmlString.Empty;
         }
     }
 }
