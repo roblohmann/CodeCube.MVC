@@ -9,6 +9,8 @@
     <PackageId>CodeCube.Mvc.AspNetCore</PackageId>
     <Product>CodeCube.Mvc.AspNetCore</Product>
     <Description>A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.</Description>
+    <PackageIconUrl>https://github.com/roblohmann/CodeCube.MVC/blob/master/nuget-icon.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/roblohmann/codecube.mvc</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

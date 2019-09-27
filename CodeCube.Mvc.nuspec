@@ -7,7 +7,8 @@
     <authors>Rob Lohmann</authors>
     <owners>Rob Lohmann</owners>
     <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
-    <projectUrl>https://github.com/Rohem/CodeCube</projectUrl>
+    <projectUrl>https://github.com/Rohem/CodeCube.MVC</projectUrl>
+    <iconUrl>https://github.com/roblohmann/CodeCube.MVC/blob/master/nuget-icon.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.
