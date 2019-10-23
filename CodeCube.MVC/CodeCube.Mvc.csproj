@@ -35,25 +35,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CodeCube.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeCube.Core.2.0.192013\lib\netstandard2.0\CodeCube.Core.dll</HintPath>
+      <HintPath>..\packages\CodeCube.Core.2.0.192703\lib\netstandard2.0\CodeCube.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.6.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+      <HintPath>..\packages\System.Drawing.Common.4.6.0\lib\net461\System.Drawing.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Syndication, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ServiceModel.Syndication.4.5.0\lib\net461\System.ServiceModel.Syndication.dll</HintPath>
+    <Reference Include="System.ServiceModel.Syndication, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Syndication.4.6.0\lib\net461\System.ServiceModel.Syndication.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -83,22 +83,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actionresults\RssActionResult.cs" />
+    <Compile Include="Actionresults\XmlResult.cs" />
     <Compile Include="Attributes\CanonicalUrlAttribute.cs" />
+    <Compile Include="Attributes\EmailValidationAttribute.cs" />
     <Compile Include="Attributes\HttpPostedFileExtensionsAttribute.cs" />
+    <Compile Include="Attributes\Validation\IntegerValidationAttribute.cs" />
+    <Compile Include="Attributes\Validation\UrlValidationAttribute.cs" />
+    <Compile Include="Coding\OutputFilter.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enumerations\ETextboxType.cs" />
+    <Compile Include="Expressions\ExpressionConverter.cs" />
+    <Compile Include="Expressions\PredicateBuilder.cs" />
+    <Compile Include="Extensions\BitmapExtensions.cs" />
+    <Compile Include="Extensions\BooleanExtensions.cs" />
+    <Compile Include="Extensions\ByteArrayExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\ENumExtensions.cs" />
+    <Compile Include="Extensions\HttpPostedFileBaseExtensions.cs" />
+    <Compile Include="Extensions\IENumerableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Filters\CompressFilterAttribute.cs" />
     <Compile Include="Filters\OutputFilterAttribute.cs" />
     <Compile Include="Filters\WhitespaceFilterAttribute.cs" />
+    <Compile Include="Functions\ImageFunctions.cs" />
     <Compile Include="HtmlHelpers\General.cs" />
     <Compile Include="HtmlHelpers\Html5Helper.cs" />
     <Compile Include="HtmlHelpers\LabelExtensions.cs" />
     <Compile Include="HtmlHelpers\Meta.cs" />
     <Compile Include="HtmlHelpers\NavigationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Tagbuilders\MetaTagBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.nl-NL.resx" />
+    <EmbeddedResource Include="Resources\Resource.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
