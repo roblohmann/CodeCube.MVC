@@ -260,7 +260,7 @@ namespace CodeCube.Mvc.Extensions
             {
                 //find the last occuring space
                 var lastOccuringSpace = text.LastIndexOf(" ", amountOfCharacters);
-                return String.Format("{0}...", text.Substring(0, (lastOccuringSpace > 0) ? lastOccuringSpace : amountOfCharacters).Trim());
+                return $"{text.Substring(0, (lastOccuringSpace > 0) ? lastOccuringSpace : amountOfCharacters).Trim()}...";
             }
 
             //Cut the string

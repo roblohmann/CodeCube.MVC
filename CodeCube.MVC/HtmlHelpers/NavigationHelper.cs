@@ -163,14 +163,14 @@ namespace CodeCube.Mvc.HtmlHelpers
             //If the current request equals the provided meta url, then add a class active.
             if (actionName.ToLower() == currentAction && controllerName.ToLower() == currentController || controllerName.ToLower() == currentController)
             {
-                className = string.Format("{0} active", className);
+                className = $"{className} active";
             }
 
             //If a meta url is provided, use this to build an old fashioned href.
             if (!String.IsNullOrWhiteSpace(url))
             {
                 var uri = url == "/" ? url : "/" + url;
-                return new MvcHtmlString(String.Format("<a href='{0}' class='{1}'>{2}</a>", uri, className, linkText));
+                return new MvcHtmlString($"<a href='{uri}' class='{className}'>{linkText}</a>");
             }
 
             //..else render a default actionlink.

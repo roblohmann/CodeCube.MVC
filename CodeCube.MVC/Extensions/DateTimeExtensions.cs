@@ -112,7 +112,7 @@ namespace CodeCube.Mvc.Extensions
         /// <returns>Readable datetime as string</returns>
         public static string AsReadableDate(this DateTime date)
         {
-            var dt = String.Format("{0:d MMMM yyyy}", date);
+            var dt = $"{date:d MMMM yyyy}";
             return dt;
         }
 
@@ -124,7 +124,7 @@ namespace CodeCube.Mvc.Extensions
         /// <returns>Readable datetime as string</returns>
         public static string AsReadableDateTime(this DateTime date)
         {
-            var dt = String.Format("{0:d MMMM yyyy HH:mm}", date);
+            var dt = $"{date:d MMMM yyyy HH:mm}";
             return dt;
         }
     }

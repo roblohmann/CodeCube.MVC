@@ -108,7 +108,6 @@
     <Compile Include="Filters\WhitespaceFilterAttribute.cs" />
     <Compile Include="Functions\ImageFunctions.cs" />
     <Compile Include="HtmlHelpers\General.cs" />
-    <Compile Include="HtmlHelpers\GeneralHelper.cs" />
     <Compile Include="HtmlHelpers\Html5Helper.cs" />
     <Compile Include="HtmlHelpers\LabelExtensions.cs" />
     <Compile Include="HtmlHelpers\Meta.cs" />
