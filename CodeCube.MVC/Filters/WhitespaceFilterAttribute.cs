@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
-using CodeCube.Mvc.Coding;
+using CodeCube.Core.Filters;
 
 namespace CodeCube.Mvc.Filters
 {

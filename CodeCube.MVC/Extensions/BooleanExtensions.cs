@@ -11,7 +11,7 @@ namespace CodeCube.Mvc.Extensions
         /// </summary>
         /// <param name="value">The boolean value. Either true/false</param>
         /// <returns>Yes or No, depending on the culture.</returns>
-        public static string AsReadable(this Boolean value)
+        public static string AsReadable(this bool value)
         {
             var returnValue = Resource.No;
             if (value)

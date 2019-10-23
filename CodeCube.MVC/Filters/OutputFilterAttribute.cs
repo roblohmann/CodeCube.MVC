@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using CodeCube.Mvc.Coding;
+using CodeCube.Core.Filters;
 
 namespace CodeCube.Mvc.Filters
 {
@@ -18,8 +18,8 @@ namespace CodeCube.Mvc.Filters
         /// </summary>
         public OutputFilterAttribute()
         {
-            _keyToFind = String.Empty;
-            _replacementValue = String.Empty;
+            _keyToFind = string.Empty;
+            _replacementValue = string.Empty;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace CodeCube.Mvc.Filters
             var response = filterContext.HttpContext.Response;
 
             if (filterContext.IsChildAction) return;
-            if (String.IsNullOrWhiteSpace(_keyToFind) || String.IsNullOrWhiteSpace(_replacementValue)) return;
+            if (string.IsNullOrWhiteSpace(_keyToFind) || string.IsNullOrWhiteSpace(_replacementValue)) return;
 
             response.Filter = new OutputFilter(response.Filter, stringvalue =>
             {

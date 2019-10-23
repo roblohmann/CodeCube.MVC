@@ -2,7 +2,7 @@
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using CodeCube.Mvc.Extensions;
+using CodeCube.Core.Extensions;
 
 namespace CodeCube.Mvc.HtmlHelpers
 {
@@ -48,12 +48,12 @@ namespace CodeCube.Mvc.HtmlHelpers
 
             var pageTitle = scriptName.Split('/')[scriptName.Split('/').Length - 1];
 
-            if (!String.IsNullOrWhiteSpace(overridePageTitle))
+            if (!string.IsNullOrWhiteSpace(overridePageTitle))
             {
                 pageTitle = overridePageTitle;
             }
 
-            if (!String.IsNullOrEmpty(pathOnly))
+            if (!string.IsNullOrEmpty(pathOnly))
             {
                 // create breadcrumb HTML for the directory name(s)
                 // We Remove the first "/" otherwise when you split the string the first item in array is empty
@@ -63,7 +63,7 @@ namespace CodeCube.Mvc.HtmlHelpers
                 var nNumDirs = strDirs.Length;
 
                 // URLs for breadcrumbs
-                var strUrl = String.Empty;
+                var strUrl = string.Empty;
                 for (var i = 0; i < nNumDirs; i++)
                 {
                     var counter = i + 1;
@@ -80,12 +80,12 @@ namespace CodeCube.Mvc.HtmlHelpers
 
                     if (counter != nNumDirs)
                     {
-                        String urlDisplayName = strDirs[i].Replace("-", " ").UppercaseFirstChar();
+                        string urlDisplayName = strDirs[i].Replace("-", " ").UppercaseFirstChar();
                         sbResult.Append("<a href='http://" + strDomain + strUrl + "/'>" + urlDisplayName + "</a>" + seperator);
                     }
                     else
                     {
-                        if (!String.IsNullOrEmpty(pageTitle))
+                        if (!string.IsNullOrEmpty(pageTitle))
                         {
                             int testRes;
                             var isGuid = StringExtensions.IsValidGuid(strDirs[i]);
@@ -167,7 +167,7 @@ namespace CodeCube.Mvc.HtmlHelpers
             }
 
             //If a meta url is provided, use this to build an old fashioned href.
-            if (!String.IsNullOrWhiteSpace(url))
+            if (!string.IsNullOrWhiteSpace(url))
             {
                 var uri = url == "/" ? url : "/" + url;
                 return new MvcHtmlString($"<a href='{uri}' class='{className}'>{linkText}</a>");

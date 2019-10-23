@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Routing;
-using CodeCube.Mvc.Enumerations;
+using CodeCube.Core.Enumerations;
 
 namespace CodeCube.Mvc.HtmlHelpers
 {

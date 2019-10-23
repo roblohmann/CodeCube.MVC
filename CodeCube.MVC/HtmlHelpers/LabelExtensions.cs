@@ -19,7 +19,7 @@ namespace CodeCube.Mvc.HtmlHelpers
             var metadata = ModelMetadata.FromLambdaExpression(expression, html.ViewData);
             var htmlFieldName = ExpressionHelper.GetExpressionText(expression);
             var labelText = metadata.DisplayName ?? metadata.PropertyName ?? htmlFieldName.Split('.').Last();
-            if (String.IsNullOrEmpty(labelText))
+            if (string.IsNullOrEmpty(labelText))
             {
                 return MvcHtmlString.Empty;
             }
