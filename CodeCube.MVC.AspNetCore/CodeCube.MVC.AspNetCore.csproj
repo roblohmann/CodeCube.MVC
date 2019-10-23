@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <Authors>Rob Lohmann</Authors>
     <Company>Rob Lohmann</Company>
     <Copyright>2019 Rob Lohmann</Copyright>
@@ -14,10 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CodeCube.Core" Version="2.0.192013" />
+    <PackageReference Include="CodeCube.Core" Version="2.0.192703" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="System.ServiceModel.Syndication" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="4.6.0" />
   </ItemGroup>
 
 </Project>
