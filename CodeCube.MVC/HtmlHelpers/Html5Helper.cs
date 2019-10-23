@@ -1,10 +1,10 @@
-﻿using CodeCube.Core.Enumerations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Routing;
+using CodeCube.Mvc.Enumerations;
 
 namespace CodeCube.Mvc.HtmlHelpers
 {
@@ -31,7 +31,7 @@ namespace CodeCube.Mvc.HtmlHelpers
         {
             return Html5TextBoxFor(htmlHelper, expression, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes), textboxType);
         }
-
+        
         /// <summary>
         /// Renders a textbox for different input types including a default placeholder.
         /// </summary>
@@ -96,7 +96,8 @@ namespace CodeCube.Mvc.HtmlHelpers
 
             //Id attribute
             textareaBuilder.GenerateId(htmlFieldName);
-            
+            //AddIdAttribute(textareaBuilder, metadata.PropertyName);
+
             //Name attribute
             AddNameAttribute(textareaBuilder, metadata.PropertyName);
 
@@ -183,6 +184,11 @@ namespace CodeCube.Mvc.HtmlHelpers
             }
         }
 
+        private static void AddIdAttribute(TagBuilder textboxBuilder, string attributeValue)
+        {
+            textboxBuilder.Attributes.Add("id", ClearValue(attributeValue));
+        }
+
         private static void AddNameAttribute(TagBuilder textboxBuilder, string attributeValue)
         {
             textboxBuilder.Attributes.Add("name", ClearValue(attributeValue));
@@ -191,7 +197,87 @@ namespace CodeCube.Mvc.HtmlHelpers
         private static string ClearValue(string value)
         {
             return value.Replace("-", "").Replace(" ", "_").ToLower();
-        }        
+        }
+
+        ////TODO: Rekening houden met maxlength
+        //private static string CreateInputField<TModel, TValue>(HtmlHelper htmlHelper, IDictionary<string, object> htmlAttributes, Expression<Func<TModel, TValue>> expression, ETextboxType textboxType)
+        //{
+        //    var htmlFieldName = ExpressionHelper.GetExpressionText(expression);
+
+        //    if (string.IsNullOrEmpty(htmlFieldName))
+        //        throw new ArgumentException("Name may not be null or empty!", "name");
+
+        //    TagBuilder tagBuilder1 = new TagBuilder("input");
+        //    tagBuilder1.MergeAttributes<string, object>(htmlAttributes);
+        //    tagBuilder1.MergeAttribute("type", GetInputtype(textboxType));
+        //    tagBuilder1.MergeAttribute("name", htmlFieldName, true);
+            
+        //    var b = htmlHelper.FormatValue(value, format);
+        //    var flag = false;
+            
+        //    switch (inputType)
+        //    {
+        //        case InputType.CheckBox:
+        //            bool? nullable = htmlHelper.GetModelStateValue(fullHtmlFieldName, typeof(bool)) as bool?;
+        //            if (nullable.HasValue)
+        //            {
+        //                isChecked = nullable.Value;
+        //                flag = true;
+        //                goto case 3;
+        //            }
+        //            else
+        //                goto case 3;
+        //        case InputType.Password:
+        //            if (value != null)
+        //            {
+        //                tagBuilder1.MergeAttribute("value", b, isExplicitValue);
+        //                break;
+        //            }
+        //            break;
+        //        case InputType.Radio:
+        //            if (!flag)
+        //            {
+        //                string a = htmlHelper.GetModelStateValue(fullHtmlFieldName, typeof(string)) as string;
+        //                if (a != null)
+        //                {
+        //                    isChecked = string.Equals(a, b, StringComparison.Ordinal);
+        //                    flag = true;
+        //                }
+        //            }
+        //            if (!flag && useViewData)
+        //                isChecked = htmlHelper.EvalBoolean(fullHtmlFieldName);
+        //            if (isChecked)
+        //                tagBuilder1.MergeAttribute("checked", "checked");
+        //            tagBuilder1.MergeAttribute("value", b, isExplicitValue);
+        //            break;
+        //        default:
+        //            string str = (string)htmlHelper.GetModelStateValue(fullHtmlFieldName, typeof(string));
+        //            tagBuilder1.MergeAttribute("value", str ?? (useViewData ? htmlHelper.EvalString(fullHtmlFieldName, format) : b), isExplicitValue);
+        //            break;
+        //    }
+        //    if (setId)
+        //        tagBuilder1.GenerateId(fullHtmlFieldName);
+            
+        //    ModelState modelState;
+        //    if (htmlHelper.ViewData.ModelState.TryGetValue(fullHtmlFieldName, out modelState) && modelState.Errors.Count > 0)
+        //        tagBuilder1.AddCssClass(HtmlHelper.ValidationInputCssClassName);
+
+        //    tagBuilder1.MergeAttributes<string, object>(htmlHelper.GetUnobtrusiveValidationAttributes(name, metadata));
+            
+        //    if (inputType != InputType.CheckBox)
+        //        return TagBuilderExtensions.ToMvcHtmlString(tagBuilder1, TagRenderMode.SelfClosing);
+            
+        //    var stringBuilder = new StringBuilder();
+        //    stringBuilder.Append(tagBuilder1.ToString(TagRenderMode.SelfClosing));
+            
+        //    var tagBuilder2 = new TagBuilder("input");
+        //    tagBuilder2.MergeAttribute("type", HtmlHelper.GetInputTypeString(InputType.Hidden));
+        //    tagBuilder2.MergeAttribute("name", fullHtmlFieldName);
+        //    tagBuilder2.MergeAttribute("value", "false");
+        //    stringBuilder.Append(tagBuilder2.ToString(TagRenderMode.SelfClosing));
+
+        //    return MvcHtmlString.Create(stringBuilder.ToString());
+        //}
         #endregion
     }
 }

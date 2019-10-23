@@ -5,10 +5,6 @@ using System.Web.Mvc;
 
 namespace CodeCube.Mvc.Attributes
 {
-    /// <summary>
-    /// Attribute to validate uploaded files.
-    /// Based on provided extensions files can be either uploaded or refused.
-    /// </summary>
     public class HttpPostedFileExtensionsAttribute : DataTypeAttribute, IClientValidatable
     {
         private readonly FileExtensionsAttribute _innerAttribute = new FileExtensionsAttribute();
@@ -16,7 +12,8 @@ namespace CodeCube.Mvc.Attributes
         /// <summary>
         ///     Initializes a new instance of the <see cref="HttpPostedFileExtensionsAttribute" /> class.
         /// </summary>
-        public HttpPostedFileExtensionsAttribute() : base(DataType.Upload)
+        public HttpPostedFileExtensionsAttribute()
+            : base(DataType.Upload)
         {
             ErrorMessage = _innerAttribute.ErrorMessage;
         }
@@ -29,8 +26,8 @@ namespace CodeCube.Mvc.Attributes
         /// </returns>
         public string Extensions
         {
-            get { return _innerAttribute.Extensions; }
-            set { _innerAttribute.Extensions = value; }
+            get => _innerAttribute.Extensions;
+            set => _innerAttribute.Extensions = value;
         }
 
         /// <summary>
@@ -75,8 +72,7 @@ namespace CodeCube.Mvc.Attributes
             //If value is null there is no file to be validated, so we return true;
             if (value == null) return true;
 
-            var file = value as HttpPostedFile;
-            if (file != null)
+            if (value is HttpPostedFile file)
             {
                 return _innerAttribute.IsValid(file.FileName);
             }

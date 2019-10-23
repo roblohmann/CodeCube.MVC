@@ -83,22 +83,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actionresults\RssActionResult.cs" />
+    <Compile Include="Actionresults\XmlResult.cs" />
     <Compile Include="Attributes\CanonicalUrlAttribute.cs" />
+    <Compile Include="Attributes\EmailValidationAttribute.cs" />
     <Compile Include="Attributes\HttpPostedFileExtensionsAttribute.cs" />
+    <Compile Include="Attributes\Validation\IntegerValidationAttribute.cs" />
+    <Compile Include="Attributes\Validation\UrlValidationAttribute.cs" />
+    <Compile Include="Coding\OutputFilter.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enumerations\ETextboxType.cs" />
+    <Compile Include="Expressions\ExpressionConverter.cs" />
+    <Compile Include="Expressions\PredicateBuilder.cs" />
+    <Compile Include="Extensions\BitmapExtensions.cs" />
+    <Compile Include="Extensions\BooleanExtensions.cs" />
+    <Compile Include="Extensions\ByteArrayExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\ENumExtensions.cs" />
+    <Compile Include="Extensions\HttpPostedFileBaseExtensions.cs" />
+    <Compile Include="Extensions\IENumerableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Filters\CompressFilterAttribute.cs" />
     <Compile Include="Filters\OutputFilterAttribute.cs" />
     <Compile Include="Filters\WhitespaceFilterAttribute.cs" />
+    <Compile Include="Functions\ImageFunctions.cs" />
     <Compile Include="HtmlHelpers\General.cs" />
+    <Compile Include="HtmlHelpers\GeneralHelper.cs" />
     <Compile Include="HtmlHelpers\Html5Helper.cs" />
     <Compile Include="HtmlHelpers\LabelExtensions.cs" />
     <Compile Include="HtmlHelpers\Meta.cs" />
     <Compile Include="HtmlHelpers\NavigationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Tagbuilders\MetaTagBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.nl-NL.resx" />
+    <EmbeddedResource Include="Resources\Resource.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

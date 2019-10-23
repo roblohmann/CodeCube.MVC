@@ -1,7 +1,8 @@
-﻿using CodeCube.Core.Extensions;
+﻿using System;
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using CodeCube.Mvc.Extensions;
 
 namespace CodeCube.Mvc.HtmlHelpers
 {
@@ -20,7 +21,7 @@ namespace CodeCube.Mvc.HtmlHelpers
         /// <param name="seperator">The seperator, used to seperate the crumbs.</param>
         /// <param name="overridePageTitle">Overrides the page title if desired. Will be last part of the breadcrumb.</param>
         /// <returns>Html string with the breadcrumb path.</returns>
-        public static MvcHtmlString BreadCrumb(this HtmlHelper helper, string prefix = "U bevindt zich hier: ", string seperator = " » ", string overridePageTitle = "")
+        public static MvcHtmlString BreadCrumb(this HtmlHelper helper, string prefix = "You are here: ", string seperator = " » ", string overridePageTitle = "")
         {
             //const string separator = " » ";
             const string rootName = "Home";
@@ -47,12 +48,12 @@ namespace CodeCube.Mvc.HtmlHelpers
 
             var pageTitle = scriptName.Split('/')[scriptName.Split('/').Length - 1];
 
-            if (!string.IsNullOrWhiteSpace(overridePageTitle))
+            if (!String.IsNullOrWhiteSpace(overridePageTitle))
             {
                 pageTitle = overridePageTitle;
             }
 
-            if (!string.IsNullOrEmpty(pathOnly))
+            if (!String.IsNullOrEmpty(pathOnly))
             {
                 // create breadcrumb HTML for the directory name(s)
                 // We Remove the first "/" otherwise when you split the string the first item in array is empty
@@ -62,7 +63,7 @@ namespace CodeCube.Mvc.HtmlHelpers
                 var nNumDirs = strDirs.Length;
 
                 // URLs for breadcrumbs
-                var strUrl = string.Empty;
+                var strUrl = String.Empty;
                 for (var i = 0; i < nNumDirs; i++)
                 {
                     var counter = i + 1;
@@ -79,12 +80,12 @@ namespace CodeCube.Mvc.HtmlHelpers
 
                     if (counter != nNumDirs)
                     {
-                        string urlDisplayName = strDirs[i].Replace("-", " ").UppercaseFirstChar();
+                        String urlDisplayName = strDirs[i].Replace("-", " ").UppercaseFirstChar();
                         sbResult.Append("<a href='http://" + strDomain + strUrl + "/'>" + urlDisplayName + "</a>" + seperator);
                     }
                     else
                     {
-                        if (!string.IsNullOrEmpty(pageTitle))
+                        if (!String.IsNullOrEmpty(pageTitle))
                         {
                             int testRes;
                             var isGuid = StringExtensions.IsValidGuid(strDirs[i]);
@@ -112,6 +113,9 @@ namespace CodeCube.Mvc.HtmlHelpers
 
                     sbResult.Append("</li>");
                 }
+
+                // write the PageTitle, pulled from the CodeBehind!
+                //sbResult.Append(" : " + pageTitle);
             }
             else
             {
@@ -163,10 +167,10 @@ namespace CodeCube.Mvc.HtmlHelpers
             }
 
             //If a meta url is provided, use this to build an old fashioned href.
-            if (!string.IsNullOrWhiteSpace(url))
+            if (!String.IsNullOrWhiteSpace(url))
             {
                 var uri = url == "/" ? url : "/" + url;
-                return new MvcHtmlString(string.Format("<a href='{0}' class='{1}'>{2}</a>", uri, className, linkText));
+                return new MvcHtmlString(String.Format("<a href='{0}' class='{1}'>{2}</a>", uri, className, linkText));
             }
 
             //..else render a default actionlink.

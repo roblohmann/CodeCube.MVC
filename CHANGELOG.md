@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.1] - t.b.d
 
 ### Added
-- Migrated filters from old library
+- Migrated filters from old Borlo library
 
 ### Changed
 - Renamed HTML-helpers
@@ -17,3 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated referenced packages.
 
 ### Removed
+- Constant with Twitter URL
+- HTML-Helper for rendering Google Analytics code

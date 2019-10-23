@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <Authors>Rob Lohmann</Authors>
     <Company>Rob Lohmann</Company>
     <Copyright>2019 Rob Lohmann</Copyright>
@@ -9,13 +9,15 @@
     <PackageId>CodeCube.Mvc.AspNetCore</PackageId>
     <Product>CodeCube.Mvc.AspNetCore</Product>
     <Description>A set of MVC utilities like menuitems, breadcrumbs, meta tags, Google analytics tags and more.</Description>
+    <PackageIconUrl>https://github.com/roblohmann/CodeCube.MVC/blob/master/nuget-icon.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/roblohmann/codecube.mvc</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CodeCube.Core" Version="2.0.192013" />
+    <PackageReference Include="CodeCube.Core" Version="2.0.192703" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="System.ServiceModel.Syndication" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="4.6.0" />
   </ItemGroup>
 
 </Project>

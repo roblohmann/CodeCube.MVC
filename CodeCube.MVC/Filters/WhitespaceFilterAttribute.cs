@@ -1,7 +1,7 @@
-﻿using CodeCube.Core.Filters;
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
+using CodeCube.Mvc.Coding;
 
 namespace CodeCube.Mvc.Filters
 {
@@ -29,23 +29,22 @@ namespace CodeCube.Mvc.Filters
             //Don't execute the filter if we're debugging.
             if (filterContext.HttpContext.IsDebuggingEnabled && _dontFilterIfDebug) return;
 
-            response.Filter = new WhitespaceFilter(response.OutputStream);
-            //response.Filter = new OutputFilter(response.Filter, stringvalue =>
-            //{
-            //    stringvalue = Regex.Replace(stringvalue, @"\s+", " ");
-            //    stringvalue = Regex.Replace(stringvalue, @"\s*\n\s*", "\n");
-            //    stringvalue = Regex.Replace(stringvalue, @"\s*\>\s*\<\s*", "><");
-            //    stringvalue = Regex.Replace(stringvalue, @"<!--(.*?)-->", "");   //Remove comments
+            response.Filter = new OutputFilter(response.Filter, stringvalue =>
+            {
+                stringvalue = Regex.Replace(stringvalue, @"\s+", " ");
+                stringvalue = Regex.Replace(stringvalue, @"\s*\n\s*", "\n");
+                stringvalue = Regex.Replace(stringvalue, @"\s*\>\s*\<\s*", "><");
+                stringvalue = Regex.Replace(stringvalue, @"<!--(.*?)-->", "");   //Remove comments
 
-            //    // single-line doctype must be preserved 
-            //    var firstEndBracketPosition = stringvalue.IndexOf(">", StringComparison.Ordinal);
-            //    if (firstEndBracketPosition < 0) return stringvalue;
+                // single-line doctype must be preserved 
+                var firstEndBracketPosition = stringvalue.IndexOf(">", StringComparison.Ordinal);
+                if (firstEndBracketPosition < 0) return stringvalue;
 
-            //    stringvalue = stringvalue.Remove(firstEndBracketPosition, 1);
-            //    stringvalue = stringvalue.Insert(firstEndBracketPosition, ">");
-
-            //    return stringvalue;
-            //});
+                stringvalue = stringvalue.Remove(firstEndBracketPosition, 1);
+                stringvalue = stringvalue.Insert(firstEndBracketPosition, ">");
+                
+                return stringvalue;
+            });
         }
     }
 }
