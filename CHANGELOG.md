@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Changed
+- Target frameworks: net6.0 t/m net10.0; MVC en Http komen uit het gedeelde framework (FrameworkReference Microsoft.AspNetCore.App) in plaats van de ASP.NET Core 2.x-packages.
+- CodeCube.Core 4.0.8, System.ServiceModel.Syndication 10.0.14.
+- Package-metadata gecentraliseerd in Directory.Build.props (MIT-licentie, PackageIcon, repository-URL).
+
+### Removed
+- Legacy .NET Framework-project CodeCube.Mvc (package is unlisted op nuget.org) en de oude .nuspec-bestanden.
+
 ## [2.0.1] - t.b.d
 
 ### Added
