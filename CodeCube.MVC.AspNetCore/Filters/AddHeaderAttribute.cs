@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace CodeCube.Mvc.AspNetCore.Filters
 {
@@ -21,9 +22,10 @@ namespace CodeCube.Mvc.AspNetCore.Filters
             _value = value;
         }
 
+        /// <inheritdoc />
         public override void OnResultExecuting(ResultExecutingContext context)
         {
-            context.HttpContext.Response.Headers.Add(_key, new string[] { _value });
+            context.HttpContext.Response.Headers.Append(_key, _value);
             base.OnResultExecuting(context);
         }
     }
