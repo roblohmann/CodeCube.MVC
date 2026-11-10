@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="CodeCube.Core" Version="4.0.8" />
+    <PackageVersion Include="CodeCube.Core" Version="4.0.9" />
     <PackageVersion Include="System.ServiceModel.Syndication" Version="10.0.14" />
   </ItemGroup>
 
